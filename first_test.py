@@ -1,5 +1,4 @@
-
-###### primeiro teste ##############
+##### primeiro teste ##############
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -9,7 +8,7 @@ for pag in range(1):
     URL = f"https://emcasa.com/imoveis/sp/sao-paulo?pagina={pag}"
     headers = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Safari/537.36' }
     r = requests.get(URL)
-    soup = BeautifulSoup(r.content, 'html5lib') # If this line causes an error, run 'pip install html5lib' or install html5lib
+    soup = BeautifulSoup(r.content) # If this line causes an error, run 'pip install html5lib' or install html5lib
     #print(soup.prettify())
 
     precos=soup.findAll("p",class_="Typography_ecTypographyParagraph__fYHaQ Typography_ecTypographyBold__qPve0")
