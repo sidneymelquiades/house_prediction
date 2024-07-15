@@ -14,6 +14,16 @@ import pickle
 # Carregamento dos dados
 file_path = './results.csv'
 data = pd.read_csv(file_path)
+Q1 = data['valor'].quantile(0.25)
+Q3 = data['valor'].quantile(0.75)
+IQR = Q3 - Q1
+
+# Definindo limites
+limite_inferior = Q1 - 1.5 * IQR
+limite_superior = Q3 + 1.5 * IQR
+
+# Removendo outliers
+data = data[(data['valor'] >= limite_inferior) & (data['valor'] <= limite_superior)]
 
 
 # Pré-processamento dos dados
@@ -66,8 +76,6 @@ def evaluate_models(X_train, y_train):
 def train_best_model(X_train, y_train, best_model_name):
     models = {
         'Linear Regression': LinearRegression(),
-        'Ridge Regression': Ridge(),
-        'Lasso Regression': Lasso(),
         'Decision Tree': DecisionTreeRegressor(),
         'Random Forest': RandomForestRegressor(),
         'Gradient Boosting': GradientBoostingRegressor(),
@@ -95,7 +103,9 @@ def main_pipeline(file_path):
     exploratory_analysis(data)
     X_train, X_test, y_train, y_test = split_data(data)
     best_models = evaluate_models(X_train, y_train)
+    print(best_models)
     best_model_name = best_models[0][0]
+    print(best_model_name)
     best_model = train_best_model(X_train, y_train, best_model_name)
     mae, rmse, r2, y_pred = evaluate_on_test(best_model, X_test, y_test)
 
@@ -114,18 +124,6 @@ def main_pipeline(file_path):
     print(f'RMSE: {rmse}')
     print(f'R2 Score: {r2}')
 
-    # Matriz de erro (residual plot)
-    plt.figure(figsize=(10, 6))
-    sns.residplot(x=y_test, y=y_pred, lowess=True)
-    plt.xlabel('Actual Value')
-    plt.ylabel('Residuals')
-    plt.title('Residuals vs Actual Value')
-    plt.show()
-
-    # Tabela com as métricas de todos os modelos
-    metrics_table = pd.DataFrame.from_dict(results, orient='index', columns=['Neg_MAE'])
-    metrics_table = metrics_table.sort_values(by='Neg_MAE', ascending=False)
-    print(metrics_table)
 
 
 # Executar o pipeline

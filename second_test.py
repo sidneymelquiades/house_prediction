@@ -40,7 +40,7 @@ def coletar_informacoes(url):
 
     return [valor, container]
 
-for pag in range(500):
+for pag in [400,401]:
 # URL da página inicial
     base_url_pag = f'https://emcasa.com/imoveis/sp/sao-paulo?pagina={pag}'  # Substitua pela URL real
     base_url="https://emcasa.com/"

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50069ff8-92ec-4664-b93a-512e6a1d2db5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modelo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/second_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trabalho_analise.py" afterDir="false" />
+    <list default="true" id="50069ff8-92ec-4664-b93a-512e6a1d2db5" name="Changes" comment="adicionando novo modelo de scraper e modelo">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/house_prediction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/house_prediction.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo.py" beforeDir="false" afterPath="$PROJECT_DIR$/modelo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/second_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sidneymelquiades/house_prediction.git",
+    "accountId": "e8419a96-d478-4b49-9466-3f44eb45a52c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -162,6 +169,27 @@
       <option name="presentableId" value="Default" />
       <updated>1719274320427</updated>
     </task>
+    <task id="LOCAL-00001" summary="adicionando novo modelo de scraper e modelo">
+      <option name="closed" value="true" />
+      <created>1721001252183</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721001252183</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adicionando novo modelo de scraper e modelo">
+      <option name="closed" value="true" />
+      <created>1721001354825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721001354825</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adicionando novo modelo de scraper e modelo" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando novo modelo de scraper e modelo" />
   </component>
 </project>
